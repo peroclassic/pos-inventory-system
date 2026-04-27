@@ -1,0 +1,805 @@
+<?php
+
+//error_reporting( ~E_NOTICE ); // avoid notice
+session_start();
+
+$adminname = $_SESSION['username'];
+
+// Test the session to see if is_auth flag was set (meaning they logged in successfully)
+
+// If test fails, send the user to login.php and prevent rest of page being shown.
+if($_SESSION['ban'] == 1){ 
+
+        ?>
+                          <script>
+        alert('Your Account has been Suspended, for complains or plea to unsuspend your account, contact your Terminal Manager');
+        window.location.href='../index.php';
+        </script>
+
+<?php
+}
+
+if($_SESSION['permission'] != 3){ 
+
+        ?>
+                          <script>
+        alert('Restricted Area');
+        window.location.href='../index.php';
+        </script>
+
+<?php
+}
+
+if (!isset($_SESSION["is_auth"])) {
+
+    header("location: ../index.php");
+
+    exit;
+
+}
+
+else if (isset($_REQUEST['logout']) && $_REQUEST['logout'] == "true") {
+
+    // At any time we can logout by sending a "logout" value which will unset the "is_auth" flag.
+
+    // We can also destroy the session if so desired.
+
+    unset($_SESSION['is_auth']);
+
+    session_destroy();
+
+ 
+
+    // After logout, send them back to login.php
+
+    header("location: ../index.php");
+
+    exit;
+
+}
+
+include("../secure/connect.php");
+require_once('../secure/library.php');
+$rand = get_rand_id(8);
+$rand;
+include('../secure/user_class.php');
+$userClass = new userClass();
+
+$errorMsgReg=''; $busnoErr = ''; $modelErr= '';
+$avseatsErr = ""; $driver_assignedErr = ""; $purposeErr = ""; $locationErr = ""; $amountErr = "";
+
+$busno = $model = $avseats = $driver_assigned = $purpose = $location = $amount = "";
+
+function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+         }
+
+
+if (isset($_POST['create'])) {
+  # code...
+
+
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["busno"])) {
+               echo $busnoErr = "<span style=\"color:red;\">Vehicle Number is required</span>";
+            }else {
+               $busno = test_input($_POST["busno"]);
+            }
+ }
+
+ 
+ 
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["model"])) {
+             echo $modelErr = "<span style=\"color:red;\">Vehicle Model cannot be Empty</span>";
+            }else {
+               $model = test_input($_POST["model"]);
+            }
+  }
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["avseats"])) {
+               echo $avseatsErr = "<span style=\"color:red;\">Available Seats input is required</span>";
+            }else {
+               $avseats = test_input($_POST["avseats"]);
+            }
+ }
+
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["driver_assigned"])) {
+               echo $driver_assignedErr = "<span style=\"color:red;\">Driver Name is required</span>";
+            }else {
+               $driver_assigned = test_input($_POST["driver_assigned"]);
+            }
+  }
+
+
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["purpose"])) {
+               echo $purposeErr = "<span style=\"color:red;\">Purpose is required</span>";
+            }else {
+               $purpose = test_input($_POST["purpose"]);
+            }
+  }
+
+
+   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["location"])) {
+               echo $locationErr = "<span style=\"color:red;\">Location is required</span>";
+            }else {
+               $location = test_input($_POST["location"]);
+            }
+  }
+
+
+   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["amount"])) {
+               echo $amountErr = "<span style=\"color:red;\">Amount is required</span>";
+            }else {
+               $amount = test_input($_POST["amount"]);
+            }
+  } 
+$date_of_hire = $_POST['date_of_hire'];
+$date_of_return = $_POST['date_of_return'];
+$status = $_POST['status'] = 'Pending';
+$datecreated= $_POST['datecreated'] = date('Y-m-d H:i:s');
+$remark= $_POST['remark'] = 'created by '.' '.$adminname;
+
+
+  # code...
+
+    $hid=$userClass->addHire($busno, $model, $avseats, $driver_assigned, $purpose, $location, $amount, $date_of_hire, $date_of_return, $status, $datecreated, $remark);
+    if($hid)
+    {
+      
+      ?>
+      <script>
+        alert('Hire Transaction Successfully Registered, Click OK to continue...');
+        window.location.href='hire.php';
+        </script>
+    <?php
+    }
+    else
+    {
+      echo $errorMsgReg="<span style=\"color:red;\">Vehicle already exist.</span>";
+    }
+
+   } 
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NIS Transport | Hire</title>
+
+
+<!-- Alien -->
+<script language="JavaScript" type="text/javascript" src="alien/suggest.js"></script>
+<script language="JavaScript" type="text/javascript" src="alien/productsearch.js"></script>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
+
+
+  <script src="alien/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+
+  <script>
+
+
+//fuction to return the xml http object
+function getXMLHTTP() { 
+    var xmlhttp=false;  
+    try{
+      xmlhttp=new XMLHttpRequest();
+    }
+    catch(e)  {   
+      try{      
+        xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      catch(e){
+        try{
+        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+        catch(e1){
+          xmlhttp=false;
+        }
+      }
+    }
+      
+    return xmlhttp;
+  }
+
+
+
+
+
+function getBusd(strURL)
+{   
+  var req = getXMLHTTP();   
+  if (req) 
+  {
+    //function to be called when state is changed
+    req.onreadystatechange = function()
+    {
+      //when state is completed i.e 4
+      if (req.readyState == 4) 
+      {     
+        // only if http status is "OK"
+        if (req.status == 200)
+        { 
+
+        var responseArray = req.responseText.split("||");          
+          document.getElementById('model').value=responseArray[0];
+          document.getElementById('seats').value=responseArray[1];
+          
+                     
+        } 
+        else 
+        {
+          alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+        }
+      }       
+     }      
+     req.open("GET", strURL, true);
+     req.send(null);
+  }     
+}
+</script>
+</head>
+
+
+
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="dashboard.php" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-light-success elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.php" class="brand-link">
+      <img src="../dist/img/AdminLTELogo2.png" alt="NIS Mass Transit Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-dark">NIS Mass Transit</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../dist/img/avatar.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="edit.php" class="d-block">Super Admin<br/>[<span style="color: red;"><?php echo $_SESSION['username'];?></span>]</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="index.php" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class=""></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="admin.php" class="nav-link">
+              <i class="nav-icon fas fa-key"></i>
+              <p>
+                Admins
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="terminal.php" class="nav-link">
+              <i class="nav-icon fas fa-map-marker-alt"></i>
+              <p>
+                Terminals
+                </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="bus.php" class="nav-link">
+              <i class="nav-icon fas fa-bus"></i>
+              <p>
+                Bus
+                </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="driver.php" class="nav-link">
+              <i class="nav-icon fas fa-hands"></i>
+              <p>
+                Captain
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="route.php" class="nav-link">
+              <i class="nav-icon fas fa-road"></i>
+              <p>
+                Routes
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="customer.php" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Customers
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="availability.php" class="nav-link">
+              <i class="nav-icon fas fa-plus-square"></i>
+              <p>
+                Availability
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="booking.php" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Bookings
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="hire.php" class="nav-link active">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Hires
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="dispatch.php" class="nav-link">
+              <i class="nav-icon fas fa-paper-plane"></i>
+              <p>
+                Dispatch
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../logout.php" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Hire</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Hire</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        
+
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <section class="col-lg-8 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            
+            <!-- /.card -->
+
+          <div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">List of hired vehicles</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Vehicle No</th>
+                    <th>Model</th>
+                    <th>Available Seats</th>
+                    <th>Assigned Captain</th>
+                    <th>Date of Hire</th>
+                    <th>Date of Return</th>
+                    <th>Date Returned</th>
+                    <th>Amount</th>
+                    <th>Purpose of Hire</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Date Created</th>
+                    <th>Updated By</th>
+                    <th>Remark</th>
+                    
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                
+                $db = getDB();
+$result = $db->prepare("SELECT * FROM hire");
+                
+                $result->execute();
+                for($i=1; $row = $result->fetch(); $i++){
+
+            ?>
+                  <tr>
+                    <td><?php echo $row['hire_id']; ?></td>
+                    <td><?php echo $row['bus_no']; ?></td>
+                    <td><?php echo $row['bus_model']; ?></td>
+                    <td><?php echo $row['available_seats']; ?></td>
+                    <td><?php echo $row['driver_assigned']; ?></td>
+                    <td><?php echo $row['date_of_hire']; ?></td>
+                    <td><?php echo $row['date_of_return']; ?></td>
+                    <td><?php echo $row['date_returned']; ?></td>
+                    <td><?php echo $row['amount']; ?></td>
+                    <td><?php echo $row['purpose']; ?></td>
+                    <td><?php echo $row['location']; ?></td>
+                    <td><?php echo $row['status']; ?></td>
+                    <td><?php echo $row['datecreated']; ?></td>
+                    <td><?php echo $row['updated_by']; ?></td>
+                    <td><?php echo $row['remark']; ?></td>
+                   
+                  </tr>
+                  <?php
+                }
+                  ?>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th>ID</th>
+                    <th>Vehicle No</th>
+                    <th>Model</th>
+                    <th>Available Seats</th>
+                    <th>Assigned Captain</th>
+                    <th>Date of Hire</th>
+                    <th>Date of Return</th>
+                    <th>Date Returned</th>
+                    <th>Amount</th>
+                    <th>Purpose of Hire</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Date Created</th>
+                    <th>Updated By</th>
+                    <th>Remark</th>
+                    
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </section>
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-4 connectedSortable">
+
+            
+          <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">Hire a Bus</h3>
+              </div>
+              <div class="card-body">
+                <!-- Username -->
+                <!-- /.form group -->
+                <form action="" method="POST">
+                <div class="form-group">
+                  <label>Bus No:</label>
+                  <select class="form-control select2 select2-success" name="busno" onChange="getBusd('alien/find_busd.php?busno='+this.value)" id="busno" data-dropdown-css-class="select2-primary" style="width: 100%;">
+                    <option selected="selected"></option>
+                    <?php
+//include "connect.php";
+   $db = getDB();
+$result = $db->prepare("SELECT * FROM bus");
+$result->execute();
+    
+            
+        for($i=0; $row = $result->fetch(); $i++)
+        
+        {
+
+echo  $terminal = "<option value='".$row['busno']."' >". $row['busno'] ."</option>";
+}
+?>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Bus Model:</label>
+
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-bus"></i></span>
+                    </div>
+                    <input type="text" name="model" id="model" class="form-control" data-inputmask-alias="username" data-inputmask-inputformat="text" data-mask readonly="">
+                  </div>
+                  <!-- /.input group -->
+                </div>
+                
+            <div class="form-group">
+                  <label>Available Seats:</label>
+
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-chair"></i></span>
+                    </div>
+                    <input type="text" name="avseats" id="seats" class="form-control" data-inputmask-alias="username" data-inputmask-inputformat="text" data-mask readonly="">
+                  </div>
+                  <!-- /.input group -->
+                </div>
+
+<!-- /.form group -->
+                <div class="form-group">
+                  <label>Captain Assigned:</label>
+                  <select class="form-control select2 select2-success" name="driver_assigned" data-dropdown-css-class="select2-primary" style="width: 100%;">
+                    <option selected="selected"></option>
+                    <?php
+//include "connect.php";
+   $db = getDB();
+$result = $db->prepare("SELECT * FROM driver");
+$result->execute();
+    
+            
+        for($i=0; $row = $result->fetch(); $i++)
+        
+        {
+
+echo  $terminal = "<option value='".$row['fname']."' >". $row['fname'] .' ---> '. $row['status']. "</option>";
+}
+?>
+                  </select>
+                </div>
+
+              <div class="form-group">
+                  <label>Date of Hire:</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="text" name="date_of_hire" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Date of Return:</label>
+                    <div class="input-group date" id="returndate" data-target-input="nearest">
+                        <input type="text" name="date_of_return" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                        <div class="input-group-append" data-target="#returndate" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Hire Purpose:</label>
+
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-info"></i></span>
+                    </div>
+                    <input type="text" name="purpose" class="form-control" data-inputmask-alias="username" data-inputmask-inputformat="text" data-mask >
+                  </div>
+                  <!-- /.input group -->
+                </div>
+
+<div class="form-group">
+                  <label>Location:</label>
+
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-map-marker-alt"></i></span>
+                    </div>
+                    <input type="text" name="location" class="form-control" data-inputmask-alias="username" data-inputmask-inputformat="text" data-mask >
+                  </div>
+                  <!-- /.input group -->
+                </div>
+
+                <div class="form-group">
+                  <label>Amount:</label>
+
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+                    </div>
+                    <input type="Number" name="amount" class="form-control" data-inputmask-alias="username" data-inputmask-inputformat="text" data-mask >
+                  </div>
+                  <!-- /.input group -->
+                </div>
+
+                <!-- /.form group -->
+                <div class="card-footer">
+                  <button type="submit" name="create" class="btn btn-success">Hire a Bus</button>
+                </div>
+              </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+                  
+            <!-- /.card -->
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+    <!--Footer-->
+<?php
+include('../footer.php');
+?>
+  <!--/Footer-->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<!--<script src="../dist/js/adminlte.js"></script>-->
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../dist/js/pages/dashboard.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+</body>
+</html>

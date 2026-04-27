@@ -1,0 +1,153 @@
+[25-Feb-2025 06:15:16 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[25-Feb-2025 06:15:16 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[25-Feb-2025 06:15:16 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[25-Feb-2025 09:25:38 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[25-Feb-2025 09:25:38 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[25-Feb-2025 09:25:38 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[25-Feb-2025 12:24:54 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[25-Feb-2025 12:24:54 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[25-Feb-2025 12:24:54 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[25-Feb-2025 17:08:29 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[25-Feb-2025 17:08:29 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[25-Feb-2025 17:08:29 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[25-Feb-2025 17:13:08 UTC] PHP Warning:  Undefined array key "uid" in /home/peroclassic/office.de-sutralounge.com/private/admin.php on line 627
+[25-Feb-2025 17:16:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/private/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:16:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/private/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:19:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/private/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:19:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/private/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:20:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/private/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:20:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/private/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:20:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/private/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/private/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:32:24 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/sell.php on line 11
+[25-Feb-2025 17:32:24 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/sell.php on line 22
+[25-Feb-2025 17:33:54 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[25-Feb-2025 17:33:54 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[25-Feb-2025 17:33:54 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[25-Feb-2025 17:35:59 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/sell.php on line 11
+[25-Feb-2025 17:35:59 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/sell.php on line 22
+[25-Feb-2025 17:38:21 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 261
+[25-Feb-2025 17:39:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 595
+[25-Feb-2025 17:39:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 596
+[25-Feb-2025 17:39:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 597
+[25-Feb-2025 17:52:19 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 261
+[25-Feb-2025 18:01:49 UTC] PHP Warning:  Undefined array key "uid" in /home/peroclassic/office.de-sutralounge.com/private/admin.php on line 627
+[25-Feb-2025 18:03:06 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[25-Feb-2025 18:03:06 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[25-Feb-2025 18:03:06 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[25-Feb-2025 18:04:49 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/admin.php on line 11
+[25-Feb-2025 18:04:49 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/admin.php on line 22
+[25-Feb-2025 18:07:47 UTC] PHP Warning:  Undefined array key "uid" in /home/peroclassic/office.de-sutralounge.com/private/admin.php on line 627
+[25-Feb-2025 18:10:15 UTC] PHP Warning:  Undefined array key "uid" in /home/peroclassic/office.de-sutralounge.com/private/admin.php on line 627
+[25-Feb-2025 20:44:09 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/salesummary.php on line 6
+[25-Feb-2025 20:44:09 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/salesummary.php on line 11
+[25-Feb-2025 20:44:09 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/salesummary.php on line 22
+[26-Feb-2025 15:28:41 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[26-Feb-2025 15:28:41 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[26-Feb-2025 15:28:41 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[26-Feb-2025 15:47:12 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[26-Feb-2025 15:47:12 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[26-Feb-2025 15:47:12 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[26-Feb-2025 15:58:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 595
+[26-Feb-2025 15:58:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 596
+[26-Feb-2025 15:58:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 597
+[26-Feb-2025 16:02:38 UTC] PHP Warning:  Undefined array key "admin_id" in /home/peroclassic/office.de-sutralounge.com/private/edit.php on line 1185
+[26-Feb-2025 16:11:44 UTC] PHP Warning:  Undefined array key "uid" in /home/peroclassic/office.de-sutralounge.com/private/admin.php on line 627
+[26-Feb-2025 16:12:43 UTC] PHP Warning:  Undefined array key "uid" in /home/peroclassic/office.de-sutralounge.com/private/admin.php on line 627
+[26-Feb-2025 16:33:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/peroclassic/office.de-sutralounge.com/private/sell.php:691
+Stack trace:
+#0 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/private/sell.php on line 691
+[26-Feb-2025 16:34:06 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 261
+[26-Feb-2025 17:21:39 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/product.php on line 6
+[26-Feb-2025 17:21:39 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/product.php on line 11
+[26-Feb-2025 17:21:39 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/product.php on line 22
+[26-Feb-2025 17:38:41 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/sell.php on line 11
+[26-Feb-2025 17:38:41 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/sell.php on line 22
+[26-Feb-2025 17:38:43 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[26-Feb-2025 17:38:43 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[26-Feb-2025 17:38:43 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[26-Feb-2025 17:38:44 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[26-Feb-2025 17:38:44 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[26-Feb-2025 17:38:44 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[26-Feb-2025 17:38:46 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/product.php on line 6
+[26-Feb-2025 17:38:46 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/product.php on line 11
+[26-Feb-2025 17:38:46 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/product.php on line 22
+[26-Feb-2025 17:38:47 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/product.php on line 6
+[26-Feb-2025 17:38:47 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/product.php on line 11
+[26-Feb-2025 17:38:47 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/product.php on line 22
+[26-Feb-2025 17:53:12 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[26-Feb-2025 17:53:12 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[26-Feb-2025 17:53:12 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[26-Feb-2025 18:19:26 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 261
+[26-Feb-2025 18:34:09 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 261
+[26-Feb-2025 18:35:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 595
+[26-Feb-2025 18:35:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 596
+[26-Feb-2025 18:35:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 597
+[26-Feb-2025 18:36:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 595
+[26-Feb-2025 18:36:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 596
+[26-Feb-2025 18:36:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 597
+[26-Feb-2025 18:37:55 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 595
+[26-Feb-2025 18:37:55 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 596
+[26-Feb-2025 18:37:55 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 597
+[26-Feb-2025 19:58:16 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[26-Feb-2025 19:58:16 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[26-Feb-2025 19:58:16 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[26-Feb-2025 20:00:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/peroclassic/office.de-sutralounge.com/private/sell.php:691
+Stack trace:
+#0 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/private/sell.php on line 691
+[26-Feb-2025 20:00:54 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/private/saleprocess.php on line 261
+[27-Feb-2025 14:19:26 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[27-Feb-2025 14:19:26 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[27-Feb-2025 14:19:26 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[27-Feb-2025 14:31:57 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[27-Feb-2025 14:31:57 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[27-Feb-2025 14:31:57 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[28-Feb-2025 18:04:17 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[28-Feb-2025 18:04:17 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[28-Feb-2025 18:04:17 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22
+[14-Mar-2025 17:35:46 UTC] PHP Warning:  Undefined array key "username" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 4
+[14-Mar-2025 17:35:46 UTC] PHP Warning:  Undefined array key "ban" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 11
+[14-Mar-2025 17:35:46 UTC] PHP Warning:  Undefined array key "permission" in /home/peroclassic/office.de-sutralounge.com/private/index.php on line 22

@@ -1,0 +1,8 @@
+[25-Feb-2025 05:42:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/peroclassic/office.de-sutralounge.com/index.php:49
+Stack trace:
+#0 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/index.php on line 49
+[25-Feb-2025 05:53:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/peroclassic/office.de-sutralounge.com/index.php:49
+Stack trace:
+#0 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/index.php on line 49

@@ -1,0 +1,135 @@
+[25-Feb-2025 17:14:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:14:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:14:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:14:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:14:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:14:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:14:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:14:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:15:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:15:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:15:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:15:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:33:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:33:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:44:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 17:44:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php:14
+Stack trace:
+#0 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(14): mysqli_connect()
+#1 /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php(10): DBController->connectDB()
+#2 /home/peroclassic/office.de-sutralounge.com/staff/salesearch.php(3): DBController->__construct()
+#3 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/alien/dbcontroller.php on line 14
+[25-Feb-2025 18:09:13 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/staff/saleprocess.php on line 261
+[26-Feb-2025 15:32:48 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/staff/saleprocess.php on line 261
+[26-Feb-2025 15:46:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/staff/saleprocess.php on line 595
+[26-Feb-2025 15:46:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/staff/saleprocess.php on line 596
+[26-Feb-2025 15:46:00 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/peroclassic/office.de-sutralounge.com/staff/saleprocess.php on line 597
+[26-Feb-2025 15:49:28 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/staff/saleprocess.php on line 261
+[26-Feb-2025 17:32:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/peroclassic/office.de-sutralounge.com/staff/sell.php:667
+Stack trace:
+#0 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/sell.php on line 667
+[26-Feb-2025 17:32:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/peroclassic/office.de-sutralounge.com/staff/sell.php:667
+Stack trace:
+#0 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/sell.php on line 667
+[26-Feb-2025 17:32:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/peroclassic/office.de-sutralounge.com/staff/sell.php:667
+Stack trace:
+#0 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/sell.php on line 667
+[26-Feb-2025 17:32:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/peroclassic/office.de-sutralounge.com/staff/sell.php:667
+Stack trace:
+#0 {main}
+  thrown in /home/peroclassic/office.de-sutralounge.com/staff/sell.php on line 667
+[26-Feb-2025 20:05:51 UTC] PHP Warning:  Undefined array key "cid" in /home/peroclassic/office.de-sutralounge.com/staff/saleprocess.php on line 261
