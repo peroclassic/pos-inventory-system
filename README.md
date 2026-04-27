@@ -1,3 +1,6 @@
+## 📌 Project Status
+Demo version (sanitized for public viewing)
+
 # POS & Inventory Management System
 
 A full-stack web application designed to manage sales, inventory, and business operations in a retail environment.
