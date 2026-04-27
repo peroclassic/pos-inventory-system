@@ -1,3 +1,6 @@
+## 🎯 Use Case
+Designed for small to medium retail businesses to manage daily sales, inventory, and staff accountability efficiently.
+
 ## 📌 Project Status
 Demo version (sanitized for public viewing)
 
@@ -8,6 +11,21 @@ A full-stack web application designed to manage sales, inventory, and business o
 ## 🚀 Overview
 
 This system was built to replace manual sales tracking and provide real-time visibility into business operations. It supports inventory management, transaction tracking, and staff-level accountability.
+
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard1.png)
+![Dashboard2](screenshots/dashboard2.png)
+
+### Sales Interface
+![Sales](screenshots/sales1.png)
+![Sales2](screenshots/sales2.png)
+![Sales3](screenshots/sales3.png)
+
+### Inventory Management
+![Inventory](screenshots/inventory1.png)
+![Inventory2](screenshots/inventory2.png)
 
 ## 💡 Key Features
 
